@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [12/Jan/2020:23:23:03 +0100] "GET /MavenWebApp HTTP/1.1" 302 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [12/Jan/2020:23:23:04 +0100] "GET /MavenWebApp/ HTTP/1.1" 200 52 http-bio-8080-exec-3 720
