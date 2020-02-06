@@ -12,3 +12,8 @@ cat >/etc/hosts<<EOF
 10.222.222.13 worker3.m2i.form worker3
 
 EOF
+
+# Enable ssh password authentication
+echo "[TASK 2] Enable ssh password authentication"
+sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+systemctl reload sshd
