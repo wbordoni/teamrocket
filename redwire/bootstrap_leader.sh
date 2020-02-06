@@ -33,3 +33,7 @@ systemctl enable docker
 #installation maven
 echo "[TASK 6] installation maven"
 yum -y install maven
+
+#configuration fichier inventory ansible
+echo "[TASK 7] configuration inventory hosts"
+cat /vagrant/Ansible/hosts > /etc/ansible/hosts
