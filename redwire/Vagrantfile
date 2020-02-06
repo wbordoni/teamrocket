@@ -11,6 +11,7 @@ Vagrant.configure(2) do |config|
   config.vm.define "leader" do |leader|
     leader.vm.box = "centos/7"
     leader.vm.hostname = "leader.m2i.form"
+    leader.vm.network "private_network", ip: "172.42.42.100"
     leader.vm.network "public_network", ip: "10.222.222.1"
     leader.vm.provider "virtualbox" do |v|
       v.name = "leader"
@@ -21,7 +22,7 @@ Vagrant.configure(2) do |config|
     end
     leader.vm.provision "shell", path: "bootstrap_leader.sh"
   end
-  
+
     # nexus server
   config.vm.define "nexus" do |nexus|
     nexus.vm.box = "centos/7"
@@ -36,8 +37,8 @@ Vagrant.configure(2) do |config|
     end
     nexus.vm.provision "shell", path: "bootstrap_nexus.sh"
   end
-  
-  
+
+
   # gitlab server
   config.vm.define "gitlab" do |gitlab|
     gitlab.vm.box = "centos/7"
@@ -53,8 +54,8 @@ Vagrant.configure(2) do |config|
 
     gitlab.vm.provision "shell", path: "bootstrap_gitlab.sh"
   end
-  
-  
+
+
   NodeCount = 3
   # Worker Nodes
   (1..NodeCount).each do |i|
