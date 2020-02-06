@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: gitlab
   become: true
   become_user: root
   roles:
