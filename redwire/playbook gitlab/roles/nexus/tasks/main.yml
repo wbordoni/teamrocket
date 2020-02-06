@@ -3,6 +3,7 @@
   docker_container:
     name: nexus
     image: "sonatype/nexus3"
-	state: started
-	ports:
-     - "8081:8081"
+    state: started
+    ports:
+      - "8081:8081"
+
