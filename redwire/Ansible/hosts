@@ -1,0 +1,13 @@
+[leader]
+leader
+
+[nexus]
+nexus
+
+[gitlab]
+gitlab
+
+[worker]
+worker1
+worker2
+worker3

@@ -1,4 +1,0 @@
-- name: Install Docker
-  yum: name=docker update_cache=yes state=present
-- name: Install Docker python library
-  yum: name=python-docker state=present update_cache=no
