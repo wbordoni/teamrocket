@@ -1,4 +1,4 @@
 - name: Install Docker
-  apt: name=docker.io update_cache=yes state=present
+  yum: name=docker update_cache=yes state=present
 - name: Install Docker python library
-  apt: name=python-docker state=present update_cache=no
+  yum: name=python-docker state=present update_cache=no
