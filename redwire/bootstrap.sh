@@ -17,3 +17,12 @@ EOF
 echo "[TASK 2] Enable ssh password authentication"
 sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 systemctl reload sshd
+
+echo "[TASK 3] clé"
+cat /vagrant/id_rsa.pub >> /root/.ssh/authorized_keys
+# Getting ssh public key from host
+#public_key_path = File.join(Dir.home, ".ssh", "id_rsa.pub")
+#public_key = IO.read(public_key_path)
+#$script = <<-SCRIPT
+#echo '#{public_key}' >> /home/vagrant/.ssh/authorized_keys
+#SCRIPT
