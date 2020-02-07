@@ -1,9 +1,8 @@
 ---
- - hosts: all
+ - hosts: worker2
    vars:
      - devops_password: '6uNIs5my'
    gather_facts: no
-   remote_user: ubuntu
    become: true
    tasks:
     - name: Add a new user named devops
