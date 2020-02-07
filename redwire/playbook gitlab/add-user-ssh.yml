@@ -3,7 +3,7 @@
    vars:
      - devops_password: '6uNIs5my'
    gather_facts: no
-   remote_user: vagrant
+   remote_user: root
    become: true
    tasks:
     - name: Add a new user named devops
