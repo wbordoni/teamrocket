@@ -19,10 +19,5 @@ sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_
 systemctl reload sshd
 
 echo "[TASK 3] clé"
+mkdir /root/.ssh/
 cat /vagrant/id_rsa.pub >> /root/.ssh/authorized_keys
-# Getting ssh public key from host
-#public_key_path = File.join(Dir.home, ".ssh", "id_rsa.pub")
-#public_key = IO.read(public_key_path)
-#$script = <<-SCRIPT
-#echo '#{public_key}' >> /home/vagrant/.ssh/authorized_keys
-#SCRIPT
