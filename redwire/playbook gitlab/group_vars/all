@@ -12,3 +12,6 @@ gitlab_smtp_password: "mypassword"
 gitlab_smtp_domain: "example.com"
 gitlab_fullchain: "/etc/letsencrypt/live/git.example.com/fullchain.pem"
 gitlab_cert_key: "/etc/letsencrypt/live/git.example.com/privkey.pem"
+
+dds_cert_path: /root/.docker
+docker_path: /var/docker
