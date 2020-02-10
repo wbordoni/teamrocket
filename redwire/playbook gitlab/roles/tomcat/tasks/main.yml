@@ -1,0 +1,8 @@
+---
+- name: Start container tomcat
+  docker_container:
+    name: tomcat
+    image: "tomcat"
+    state: started
+    ports:
+      - "8088:8088"
