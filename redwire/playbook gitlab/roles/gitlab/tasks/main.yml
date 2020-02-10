@@ -6,7 +6,7 @@
     - "{{ gitlab_data_dir }}"
 
 - name: Install Gitlab container
-  docker:
+  docker_container:
     name: gitlab
     image: "{{ gitlab_image }}"
     state: started

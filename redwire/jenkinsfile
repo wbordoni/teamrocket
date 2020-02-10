@@ -1,0 +1,17 @@
+node {
+    stage('git') {
+        git 'https://github.com/wbordoni/teamrocket.git'
+    }
+    stage('build maven') {
+        build 'mavenbuild'
+    }
+    stage('Deploy worker') {
+       ansiblePlaybook become: true, credentialsId: 'worker', installation: 'ansible', limit: 'worker1', playbook: 'redwire/playbook gitlab/worker.yml'
+    }
+    stage('Deploy nexus') {
+        ansiblePlaybook become: true, credentialsId: 'nexus_gitlab', installation: 'ansible', limit: 'nexus', playbook: 'redwire/playbook gitlab/nexus.yml'
+    }
+    stage('Deploy gitlab') {
+       ansiblePlaybook become: true, credentialsId: 'nexus_gitlab', installation: 'ansible', limit: 'gitlab', playbook: 'redwire/playbook gitlab/gitlab.yml'
+    }
+}
