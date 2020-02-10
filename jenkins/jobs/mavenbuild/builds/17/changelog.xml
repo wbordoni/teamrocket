@@ -1,0 +1,10 @@
+commit 809746b04e435987173f682ccbd29c874c27ed97
+tree c882bef4b1f228d1811d4aa5cdc9cc35ab58f99b
+parent df1daa644fb45f16ce1ec97788bcfe2787961b5d
+author Cranod <jager.vincent@gmail.com> 2020-02-10 14:23:22 +0100
+committer Cranod <jager.vincent@gmail.com> 2020-02-10 14:24:00 +0100
+
+    ajout jenkinsfile
+
+
+:000000 100644 0000000000000000000000000000000000000000 6f716c64edd16bed65b20a710d5b41d34169fb8f A	redwire/jenkinsfile

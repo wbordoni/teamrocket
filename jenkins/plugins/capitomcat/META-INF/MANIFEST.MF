@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Created-By: 0.4.0
+Build-Ruby-Platform: java
+Build-Ruby-Version: 1.9.3
+Built-By: sunggun
+Group-Id: org.jenkins-ci.plugins
+Short-Name: capitomcat
+Long-Name: Capitomcat Plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Capitomcat+Plugin
+Plugin-Class: ruby.RubyPlugin
+Plugin-Version: 0.1.0
+Jenkins-Version: 1.432
+Plugin-Dependencies: ruby-runtime:0.11
+Bundle-Path: vendor/gems

@@ -1,0 +1,3 @@
+[filesystem "leader.m2i.form|Oracle Corporation|1.8.0_242|rootfs"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 0 nanoseconds

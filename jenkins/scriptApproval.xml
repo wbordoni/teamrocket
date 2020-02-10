@@ -1,0 +1,33 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<scriptApproval plugin="script-security@1.69">
+  <approvedScriptHashes>
+    <string>017d0db438428731cd600b6ebda805065433520f</string>
+    <string>2184cd2b1a45d4424a85b58096e785b726de819d</string>
+    <string>21ded4506c857f1a144323f87f7e984e8b9b6d75</string>
+    <string>3e2d76bfa8f40e723f57f8f7e3a822e121bd7f5a</string>
+    <string>3e78eb5ac206fdcef83e171f2ab8a7f338c952cb</string>
+    <string>49cfbb7c6fc433fc8308bef67ff1209d13dddf80</string>
+    <string>4e5cc485cf64b859875b5d019f25ec95216d6500</string>
+    <string>6725207c3aa44658ec2dc55fc3b4623d3156283a</string>
+    <string>805ff41a9288da012a5bcc373d02586f7dbb6cce</string>
+    <string>8421869595fa55cc2ba0db77760bb0adfeb0d85e</string>
+    <string>8f2dc6ca091af7650ea28b1b46e115ba71560522</string>
+    <string>90850721f08a1c8d1ddc53bfa76fd1a3bc4a04da</string>
+    <string>9264a8e97ac9a21c23e901e2cb4ffacd410a74e9</string>
+    <string>aba0773d92f49cd912fb69b798080734144c14b6</string>
+    <string>aed95797a9af150cdb36dd6968042fd1cafc588b</string>
+    <string>b0ecda19154a96bc9a5dc5a5adebee10a3510474</string>
+    <string>c132478d50c80f6a839b3ada623d494536063d1b</string>
+    <string>ce02c40b9b47afd0fcbf975de9f172703a23975a</string>
+    <string>d39883c2db0e635352bd3a642bd818753ccf080d</string>
+    <string>d78934bebca3ff339fdffdfe86c8a7eb22f0d508</string>
+    <string>e3fc4447e62cdfb7a392d4bce1aacc33d5fddb0b</string>
+    <string>f503d6a24bb6c815d86d656c37a46ae0964e6d7f</string>
+  </approvedScriptHashes>
+  <approvedSignatures/>
+  <aclApprovedSignatures/>
+  <approvedClasspathEntries/>
+  <pendingScripts/>
+  <pendingSignatures/>
+  <pendingClasspathEntries/>
+</scriptApproval>

@@ -1,0 +1,29 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.36">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.78">
+    <script>node {  
+    stage(&apos;git&apos;) { 
+        git &apos;https://github.com/wbordoni/teamrocket.git&apos;  
+    }
+    stage(&apos;build maven&apos;) { 
+        build &apos;mavenbuild&apos; 
+    }
+    stage(&apos;Deploy worker&apos;) { 
+       ansiblePlaybook become: true, credentialsId: &apos;worker&apos;, installation: &apos;ansible&apos;, limit: &apos;worker1&apos;, playbook: &apos;redwire/playbook gitlab/worker.yml&apos;
+    } 
+    stage(&apos;Deploy nexus&apos;) { 
+        ansiblePlaybook become: true, credentialsId: &apos;nexus_gitlab&apos;, installation: &apos;ansible&apos;, limit: &apos;nexus&apos;, playbook: &apos;redwire/playbook gitlab/nexus.yml&apos;
+    }
+    stage(&apos;Deploy gitlab&apos;) { 
+       ansiblePlaybook become: true, credentialsId: &apos;nexus_gitlab&apos;, installation: &apos;ansible&apos;, limit: &apos;gitlab&apos;, playbook: &apos;redwire/playbook gitlab/gitlab.yml&apos;
+    } 
+}</script>
+    <sandbox>false</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

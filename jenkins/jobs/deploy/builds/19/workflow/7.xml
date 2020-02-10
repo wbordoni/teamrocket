@@ -1,0 +1,25 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@3.4">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@2.78">
+    <parentIds>
+      <string>6</string>
+    </parentIds>
+    <id>7</id>
+    <descriptorId>jenkins.plugins.git.GitStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@2.78">
+      <arguments>
+        <entry>
+          <string>url</string>
+          <string>https://github.com/wbordoni/teamrocket.git</string>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@2.39">
+      <startTime>1581335860439</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+  </actions>
+</Tag>

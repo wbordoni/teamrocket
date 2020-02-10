@@ -1,0 +1,60 @@
+Started by upstream project "[8mha:////4KKJPD7N0/a5PoW/2BVqkQ29b8XGEOBVgH2sxQQlqtXSAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/az8JP2U1IKc/Ep9AE110wvBAAAA[0mdeploy" build number [8mha:////4Ifit8IjWZxrtMtSgDssIhEYi8Me5PD0slVhO3rZKeAjAAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgY+/az8JP2U1IKc/Ep9Q0sA+kQXHsMAAAA=[0m19
+originally caused by:
+ Started by user [8mha:////4FzuyJPUZo4woMksmOISNTD3bwKhqSKN8Z1ioSgLbrnBAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9rNS87My8YgDGtiJjwgAAAA==[0mjenkins
+Running as SYSTEM
+Building on master in workspace /var/lib/jenkins/workspace/mavenbuild
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/wbordoni/teamrocket.git # timeout=10
+Fetching upstream changes from https://github.com/wbordoni/teamrocket.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/wbordoni/teamrocket.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision cff63156d85482ab8def78434e23a54b85a89278 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f cff63156d85482ab8def78434e23a54b85a89278 # timeout=10
+Commit message: "ansible test user change"
+ > git rev-list --no-walk cff63156d85482ab8def78434e23a54b85a89278 # timeout=10
+[mavenbuild] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3/bin/mvn -f MavenWebAppRestSwaggerSample/pom.xml package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------< MavenWebRestSwagger:MavenWebAppRestSwaggerSample >----------
+[INFO] Building MavenWebAppRestSwaggerSample Maven Webapp 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[8mha:////4MHSGk3uUB2NQ932eIQeKJlIVy8GKQe4wu/msjjPVLDWAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ MavenWebAppRestSwaggerSample ---
+[8mha:////4FepQ8xnJCxOo47nrLXsxp0YVOCFnEOy/nt8KgXRIJhJAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/mavenbuild/MavenWebAppRestSwaggerSample/src/main/resources
+[INFO] 
+[8mha:////4MHSGk3uUB2NQ932eIQeKJlIVy8GKQe4wu/msjjPVLDWAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ MavenWebAppRestSwaggerSample ---
+[INFO] Changes detected - recompiling the module!
+[8mha:////4FepQ8xnJCxOo47nrLXsxp0YVOCFnEOy/nt8KgXRIJhJAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /var/lib/jenkins/workspace/mavenbuild/MavenWebAppRestSwaggerSample/target/classes
+[INFO] 
+[8mha:////4MHSGk3uUB2NQ932eIQeKJlIVy8GKQe4wu/msjjPVLDWAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ MavenWebAppRestSwaggerSample ---
+[8mha:////4FepQ8xnJCxOo47nrLXsxp0YVOCFnEOy/nt8KgXRIJhJAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/mavenbuild/MavenWebAppRestSwaggerSample/src/test/resources
+[INFO] 
+[8mha:////4MHSGk3uUB2NQ932eIQeKJlIVy8GKQe4wu/msjjPVLDWAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ MavenWebAppRestSwaggerSample ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:////4MHSGk3uUB2NQ932eIQeKJlIVy8GKQe4wu/msjjPVLDWAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ MavenWebAppRestSwaggerSample ---
+[INFO] No tests to run.
+[INFO] 
+[8mha:////4MHSGk3uUB2NQ932eIQeKJlIVy8GKQe4wu/msjjPVLDWAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-war-plugin:2.2:war (default-war) @ MavenWebAppRestSwaggerSample ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [MavenWebAppRestSwaggerSample] in [/var/lib/jenkins/workspace/mavenbuild/MavenWebAppRestSwaggerSample/target/MavenWebAppRestSwaggerSample]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/var/lib/jenkins/workspace/mavenbuild/MavenWebAppRestSwaggerSample/src/main/webapp]
+[INFO] Webapp assembled in [99 msecs]
+[INFO] Building war: /var/lib/jenkins/workspace/mavenbuild/MavenWebAppRestSwaggerSample/target/MavenWebAppRestSwaggerSample.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.818 s
+[INFO] Finished at: 2020-02-10T11:57:52Z
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS

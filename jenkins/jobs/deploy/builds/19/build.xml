@@ -1,0 +1,146 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.36">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>jenkins</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.15">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <hudson.plugins.git.util.BuildData plugin="git@4.1.1">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.1.1">
+              <sha1>cff63156d85482ab8def78434e23a54b85a89278</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>19</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/wbordoni/teamrocket.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@4.1.1">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/var/lib/jenkins/workspace/deploy</ws>
+    </hudson.plugins.git.GitTagAction>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@2.10">
+      <revisionStates>
+        <entry>
+          <string>git https://github.com/wbordoni/teamrocket.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder plugin="credentials@2.3.1">
+      <boundCredentials class="concurrent-hash-map"/>
+    </com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder>
+  </actions>
+  <queueId>50</queueId>
+  <timestamp>1581335860363</timestamp>
+  <startTime>1581335860365</startTime>
+  <result>FAILURE</result>
+  <duration>58534</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>node {  
+    stage(&apos;git&apos;) { 
+        git &apos;https://github.com/wbordoni/teamrocket.git&apos;  
+    }
+    stage(&apos;build maven&apos;) { 
+        build &apos;mavenbuild&apos; 
+    }
+    stage(&apos;Deploy worker&apos;) { 
+       ansiblePlaybook become: true, credentialsId: &apos;worker&apos;, installation: &apos;ansible&apos;, limit: &apos;worker1&apos;, playbook: &apos;redwire/playbook gitlab/worker.yml&apos;
+    } 
+    stage(&apos;Deploy nexus&apos;) { 
+        ansiblePlaybook become: true, credentialsId: &apos;nexus_gitlab&apos;, installation: &apos;ansible&apos;, limit: &apos;nexus&apos;, playbook: &apos;redwire/playbook gitlab/nexus.yml&apos;
+    }
+    stage(&apos;Deploy nexus&apos;) { 
+       ansiblePlaybook become: true, credentialsId: &apos;nexus_gitlab&apos;, installation: &apos;ansible&apos;, limit: &apos;gitlab&apos;, playbook: &apos;redwire/playbook gitlab/gitlab.yml&apos;
+    } 
+}</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>88911663</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>14299924</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>224951132</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>24952194</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>21852979</long>
+      </entry>
+    </timings>
+    <sandbox>false</sandbox>
+    <iota>32</iota>
+    <head>1:32</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@4.1.1">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://github.com/wbordoni/teamrocket.git</url>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches class="singleton-list">
+          <hudson.plugins.git.BranchSpec>
+            <name>*/master</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.LocalBranch>
+            <localBranch>master</localBranch>
+          </hudson.plugins.git.extensions.impl.LocalBranch>
+        </extensions>
+      </scm>
+      <node></node>
+      <workspace>/var/lib/jenkins/workspace/deploy</workspace>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

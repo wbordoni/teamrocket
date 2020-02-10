@@ -1,0 +1,43 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@3.4">
+  <node class="org.jenkinsci.plugins.workflow.graph.FlowEndNode" plugin="workflow-api@2.39">
+    <parentIds>
+      <string>21</string>
+    </parentIds>
+    <id>22</id>
+    <startId>2</startId>
+    <result>
+      <name>FAILURE</name>
+      <ordinal>2</ordinal>
+      <color>RED</color>
+      <completeBuild>true</completeBuild>
+    </result>
+  </node>
+  <actions>
+    <wf.a.ErrorAction plugin="workflow-api@2.39">
+      <error class="hudson.AbortException">
+        <detailMessage>Ansible playbook execution failed</detailMessage>
+        <stackTrace>
+          <trace>org.jenkinsci.plugins.ansible.AnsiblePlaybookBuilder.perform(AnsiblePlaybookBuilder.java:262)</trace>
+          <trace>org.jenkinsci.plugins.ansible.workflow.AnsiblePlaybookStep$AnsiblePlaybookExecution.run(AnsiblePlaybookStep.java:400)</trace>
+          <trace>org.jenkinsci.plugins.ansible.workflow.AnsiblePlaybookStep$AnsiblePlaybookExecution.run(AnsiblePlaybookStep.java:321)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.AbstractSynchronousNonBlockingStepExecution$1$1.call(AbstractSynchronousNonBlockingStepExecution.java:47)</trace>
+          <trace>hudson.security.ACL.impersonate(ACL.java:290)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.AbstractSynchronousNonBlockingStepExecution$1.run(AbstractSynchronousNonBlockingStepExecution.java:44)</trace>
+          <trace>java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)</trace>
+          <trace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</trace>
+          <trace>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)</trace>
+          <trace>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)</trace>
+          <trace>java.lang.Thread.run(Thread.java:748)</trace>
+        </stackTrace>
+        <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+          <c class="list"/>
+          <list reference="../c"/>
+        </suppressedExceptions>
+      </error>
+    </wf.a.ErrorAction>
+    <wf.a.TimingAction plugin="workflow-api@2.39">
+      <startTime>1581335198744</startTime>
+    </wf.a.TimingAction>
+  </actions>
+</Tag>

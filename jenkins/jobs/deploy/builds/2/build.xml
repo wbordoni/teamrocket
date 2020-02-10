@@ -1,0 +1,62 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.36">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>jenkins</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.15">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+  </actions>
+  <queueId>6</queueId>
+  <timestamp>1581330423429</timestamp>
+  <startTime>1581330423431</startTime>
+  <result>FAILURE</result>
+  <duration>59</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>git &apos;https://github.com/wbordoni/teamrocket.git&apos;
+build &apos;mavenbuild&apos;
+ansiblePlaybook become: true, credentialsId: &apos;829ade93-ec60-407e-9bc0-d62e42dbb261&apos;, installation: &apos;ansible&apos;, inventory: &apos;redwire/playbook gitlab/gitlab.yml&apos;, playbook: &apos;&apos;</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>13103346</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>10139109</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>23078983</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>26616937</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>2291205</long>
+      </entry>
+    </timings>
+    <sandbox>false</sandbox>
+    <iota>4</iota>
+    <head>1:4</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

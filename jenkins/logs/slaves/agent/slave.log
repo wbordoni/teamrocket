@@ -1,0 +1,8 @@
+SSHLauncher{host='leader', port=22, credentialsId='829ade93-ec60-407e-9bc0-d62e42dbb261', jvmOptions='', javaPath='', prefixStartSlaveCmd='', suffixStartSlaveCmd='', launchTimeoutSeconds=60, maxNumRetries=10, retryWaitTime=15, sshHostKeyVerificationStrategy=hudson.plugins.sshslaves.verifiers.NonVerifyingKeyVerificationStrategy, tcpNoDelay=true, trackCredentials=true}
+[02/10/20 13:22:50] [SSH] Opening SSH connection to leader:22.
+[02/10/20 13:22:50] [SSH] WARNING: SSH Host Keys are not being verified. Man-in-the-middle attacks may be possible against this connection.
+ERROR: Server rejected the 1 private key(s) for jenkins (credentialId:829ade93-ec60-407e-9bc0-d62e42dbb261/method:publickey)
+[02/10/20 13:22:50] [SSH] Authentication failed.
+Authentication failed.
+[02/10/20 13:22:50] Launch failed - cleaning up connection
+[02/10/20 13:22:50] [SSH] Connection closed.
