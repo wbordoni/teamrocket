@@ -18,3 +18,5 @@ lancer jenkinsfile
 se servir un verre
 
 chercher un travail.
+
+PAYER UNE BIERE A WILFRIED
