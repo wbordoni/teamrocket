@@ -149,7 +149,7 @@
     <maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
     <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
     <maven-release-plugin.version>2.5.2</maven-release-plugin.version>
-    <ssh-credentials.version>1.10</ssh-credentials.version>
+    <ssh-credentials.version>1.14</ssh-credentials.version>
     <plain-credentials.version>1.4</plain-credentials.version>
     <credentials.version>1.16.1</credentials.version>
     <workflow-step-api.version>1.10</workflow-step-api.version>
